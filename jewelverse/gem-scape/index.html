@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jewelverse - Gem Scape · GrindPixel Studio</title>
+<meta name="description" content="Un puzle de flechas en pixel art: toca cada flecha en el orden correcto y vacía el tablero. 100 niveles en 10 tierras, guardianes, Reto diario, 60 puzles y 15 idiomas.">
+<meta property="og:title" content="Jewelverse - Gem Scape · GrindPixel Studio">
+<meta property="og:description" content="Un puzle de flechas en pixel art: toca cada flecha en el orden correcto y vacía el tablero. 100 niveles en 10 tierras, guardianes, Reto diario, 60 puzles y 15 idiomas.">
+<meta property="og:image" content="https://grindpixel.studio/img/gs-destacada.jpg">
+<meta name="theme-color" content="#0b0c20">
+<link rel="icon" href="../../favicon.png">
+<link rel="preload" href="../../fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../estilo.css">
+
+</head>
+<body>
+<header class="bar"><div class="wrap"><a class="logo" href="../../"><img src="../../img/logo.svg" alt="GrindPixel Studio" width="160" height="35"></a><nav><a href="../../">Inicio</a><a href="../../jewelverse/" aria-current=page>Jewelverse</a><a href="../../privacidad/">Privacidad</a><a href="#contacto">Contacto</a></nav></div></header>
+<main>
+<section style="padding-top:36px">
+  <div class="wrap">
+    <p class="crumb" data-rv><a href="../../">GrindPixel Studio</a> › <a href="../../jewelverse/">Jewelverse</a> › Gem Scape</p>
+    <div class="ghero">
+      <div data-rv>
+        <span class="kicker">JEWELVERSE</span>
+        <h1>Gem Scape</h1>
+        <div class="orn"><i></i></div>
+        <p class="lead">Cada flecha sale por su propio camino, pero solo si nada se le cruza. Tócalas en el orden correcto y vacía el tablero. Un puzle de flechas en pixel art, del mundo de joyas de Jewelverse.</p>
+        <p style="margin-top:22px; display:flex; gap:12px; flex-wrap:wrap" class="ctas"><span class="tag soon">Pronto en Google Play · Gratis</span><a class="tag" style="color:var(--gold); text-decoration:none" href="#aventura">Ver las diez tierras ↓</a></p>
+      </div>
+      <div class="play" data-rv>
+        <div class="top"><span id="tHearts"></span><span>FLECHAS <b id="tLeft">0</b></span></div>
+        <canvas id="tablero" aria-label="Un tablero de Gem Scape para jugar: toca las flechas"></canvas>
+        <div class="bot"><span id="tMsg"></span><button class="btn" id="tAgain" hidden>OTRO TABLERO</button></div>
+        <p class="hint">Pruébalo aquí: toca una flecha. Si choca, pierdes un corazón.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:30px 0 60px">
+  <div class="wrap">
+    <div class="stats" data-rv-kids>
+      <div><b data-count="100">100</b><span>niveles</span></div>
+      <div><b data-count="10">10</b><span>tierras</span></div>
+      <div><b data-count="60">60</b><span>puzles</span></div>
+      <div><b data-count="7">7</b><span>modos</span></div>
+      <div><b data-count="15">15</b><span>idiomas</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="jugar">
+  <div class="wrap">
+    <h2 data-rv>Cómo se juega</h2>
+    <div class="orn" data-rv><i></i></div>
+    <div class="grid g3" data-rv-kids>
+      <div class="card tilt"><h3>1 · Mira el camino</h3><p>Cada flecha es una línea fina del color de una gema. Al tocarla, se desliza por su propio camino hasta salir del tablero.</p></div>
+      <div class="card tilt"><h3>2 · Toca en orden</h3><p>Si otra flecha se le cruza, choca y pierdes un corazón. Saca primero las que estorban: el orden lo es todo.</p></div>
+      <div class="card tilt"><h3>3 · Vacía el tablero</h3><p>Gana con los corazones que te queden: sin perder ninguno, tres estrellas. Encadena flechas sin fallar para encender la Fiebre.</p></div>
+    </div>
+    <div class="grid g3" style="margin-top:22px" data-rv-kids>
+      <div class="card tilt"><h3>Martillo</h3><p>Rompe cualquier flecha, esté donde esté.</p></div>
+      <div class="card tilt"><h3>Reversa</h3><p>Da vuelta una flecha: saldrá por el otro lado.</p></div>
+      <div class="card tilt"><h3>Escudo y Brújula</h3><p>El Escudo te salva del próximo choque; la Brújula marca una flecha que puede salir.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="aventura">
+  <div class="wrap">
+    <h2 data-rv>Aventura: diez tierras</h2>
+    <div class="orn" data-rv><i></i></div>
+    <p data-rv class="lead center" style="margin:0 auto 40px">Cien niveles a lo largo de un mapa que recorres de tierra en tierra. Cada tierra cambia el juego con su propia regla, y por el camino hay cofres, fuentes de los deseos, tiendas y desafíos.</p>
+  </div>
+  <div class="cwrap" data-rv>
+    <button class="cbtn cprev" aria-label="Tierra anterior">‹</button>
+    <div class="carrusel">
+      <div class="land tilt" data-c="#e9f0ff"><img src="../../img/gs-valle.jpg" alt="" loading="lazy"><div><span class="n">Niveles 1–10</span><h3>El valle real</h3><b style="color:var(--pearl)">Clásico</b><p>Una flecha sale si nada la tapa.</p></div></div>
+      <div class="land tilt" data-c="#ff9d3c"><img src="../../img/gs-dunas.jpg" alt="" loading="lazy"><div><span class="n">Niveles 11–20</span><h3>Las dunas de ámbar</h3><b style="color:var(--topaz)">Engaste</b><p>Cada flecha deja su gema en el engaste: tres iguales se van.</p></div></div>
+      <div class="land tilt" data-c="#e8475b"><img src="../../img/gs-costa.jpg" alt="" loading="lazy"><div><span class="n">Niveles 21–30</span><h3>La costa de coral</h3><b style="color:var(--ruby)">Fusión</b><p>Dos flechas del mismo color que chocan se van juntas.</p></div></div>
+      <div class="land tilt" data-c="#4c8dff"><img src="../../img/gs-hielo.jpg" alt="" loading="lazy"><div><span class="n">Niveles 31–40</span><h3>Los picos de hielo</h3><b style="color:var(--sapphire)">Escarcha</b><p>Una flecha helada se suelta cuando sale una vecina.</p></div></div>
+      <div class="land tilt" data-c="#ff6a3c"><img src="../../img/gs-volcan.jpg" alt="" loading="lazy"><div><span class="n">Niveles 41–50</span><h3>El reino del volcán</h3><b style="color:var(--topaz)">Brasas</b><p>Saca las flechas encendidas antes de que se quemen.</p></div></div>
+      <div class="land tilt" data-c="#3fd17a"><img src="../../img/gs-selva.jpg" alt="" loading="lazy"><div><span class="n">Niveles 51–60</span><h3>Selva esmeralda</h3><b style="color:var(--emerald)">Lianas</b><p>Dos flechas atadas salen juntas o no sale ninguna.</p></div></div>
+      <div class="land tilt" data-c="#ffe14d"><img src="../../img/gs-ruinas.jpg" alt="" loading="lazy"><div><span class="n">Niveles 61–70</span><h3>Las ruinas de mármol</h3><b style="color:var(--citrine)">Puertas</b><p>Cada flecha sale solo por la puerta de su color.</p></div></div>
+      <div class="land tilt" data-c="#b9c6ff"><img src="../../img/gs-cielo.jpg" alt="" loading="lazy"><div><span class="n">Niveles 71–80</span><h3>La ciudad celeste</h3><b style="color:var(--pearl)">Nubes</b><p>Una nube tapa la flecha hasta que sale una vecina.</p></div></div>
+      <div class="land tilt" data-c="#3fd17a"><img src="../../img/gs-bambu.jpg" alt="" loading="lazy"><div><span class="n">Niveles 81–90</span><h3>Los picos de jade</h3><b style="color:var(--emerald)">Molinillos</b><p>Su punta gira un cuarto con cada flecha que sale.</p></div></div>
+      <div class="land tilt" data-c="#b46cff"><img src="../../img/gs-abismo.jpg" alt="" loading="lazy"><div><span class="n">Niveles 91–100</span><h3>El abismo marino</h3><b style="color:var(--amethyst)">Mezclas</b><p>Dos reglas a la vez. Solo para quien llegó hasta aquí.</p></div></div>
+    </div>
+    <button class="cbtn cnext" aria-label="Tierra siguiente">›</button>
+  </div>
+  <div class="cdots"></div>
+</section>
+
+<section id="guardianes">
+  <div class="wrap">
+    <div class="feat" data-rv>
+      <div class="phone float"><img src="../../img/gs-guardian.jpg" alt="Un guardián con la Joya real" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">Los guardianes</h2>
+        <p class="lead">Cada diez niveles, un guardián custodia la Joya real. Libérala antes de que se acaben las jugadas: saca solo las flechas que la encierran.</p>
+        <ul>
+          <li>Desde la segunda tierra, cada guardián juega además con la regla de su tierra.</li>
+          <li>En el abismo, el último guardián mezcla Engaste y Fusión.</li>
+          <li>En <strong>Guardianes seguidos</strong> los enfrentas uno tras otro, sin descanso.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feat r" data-rv>
+      <div class="phone float"><img src="../../img/gs-mapa.jpg" alt="El mapa de la Aventura" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">El camino</h2>
+        <p class="lead">El mapa es un viaje: cada capítulo es un paisaje nuevo, con su música y su clima.</p>
+        <ul>
+          <li><strong>Cofres</strong> con cargas de poderes.</li>
+          <li><strong>Fuentes de los deseos</strong>: tu próximo nivel empieza con un corazón más.</li>
+          <li><strong>Tiendas</strong> y <strong>santuarios</strong> con bendiciones para el viaje.</li>
+          <li><strong>Desafíos</strong>: libera la Joya real con una sola jugada de sobra y gana un cofre grande.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feat" data-rv>
+      <div class="phone float"><img src="../../img/gs-clima.jpg" alt="Un nivel con nieve" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">El clima juega contigo</h2>
+        <p class="lead">Algunos niveles traen el tiempo de su tierra, y no solo se ve: cambia la partida.</p>
+        <ul>
+          <li><strong>Brisa</strong>: una ráfaga se lleva las flechas libres que apuntan con el viento.</li>
+          <li><strong>Nieve y ventisca</strong>: los copos congelan flechas por unas jugadas.</li>
+          <li><strong>Lluvia</strong>: los charcos salpican y liberan a sus vecinas.</li>
+          <li><strong>Tormenta</strong>: un rayo avisado recorre una columna.</li>
+          <li><strong>Terremoto</strong>: sacude flechas sueltas y aviva las brasas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="modos">
+  <div class="wrap">
+    <h2 data-rv>Más modos</h2>
+    <div class="orn" data-rv><i></i></div>
+    <div class="grid g2" style="margin-bottom:48px" data-rv-kids>
+      <div class="card tilt"><h3>Libre</h3><p>Tableros sin fin que crecen y mezclan reglas a medida que avanzas. Juega a tu ritmo y llega lo más lejos que puedas.</p></div>
+      <div class="card tilt"><h3>Contrarreloj</h3><p>El tiempo corre: cada tablero vaciado te devuelve unos segundos. Desde el tercero, cada tablero trae una regla.</p></div>
+      <div class="card tilt"><h3>Récord</h3><p>¿Cuántos puntos haces en 30 segundos, 1, 2 o 5 minutos? Cada choque te cuesta tiempo.</p></div>
+      <div class="card tilt"><h3>Guardianes seguidos</h3><p>Todos los guardianes, uno detrás de otro. ¿Hasta dónde llegas?</p></div>
+    </div>
+    <div class="feat" data-rv>
+      <div class="phone float"><img src="../../img/gs-dailycard.jpg" alt="El Reto diario" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">Reto diario</h2>
+        <p class="lead">Un tablero nuevo cada día, igual para todos, con su giro: siete colores, escarcha, lianas, brasas o la Joya real.</p>
+        <ul>
+          <li>Medallas de bronce, plata y oro según los corazones que conservas.</li>
+          <li>Una racha semanal de siete farolillos, con un cofre al final de la semana.</li>
+          <li>Pensado para los que ya dominan el juego: tableros grandes y dos reglas a la vez.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="feat r" data-rv>
+      <div class="phone float"><img src="../../img/gs-puzle.jpg" alt="Un puzle de Gem Scape" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">60 puzles</h2>
+        <p class="lead">Tableros con una sola solución exacta. Nada de suerte: solo lógica.</p>
+        <ul>
+          <li>Paquetes de dificultad creciente, desde «Primeros pasos».</li>
+          <li>Pistas, deshacer y reiniciar cuando te atasques.</li>
+          <li>Cada puzle resuelto suma a tus logros y estadísticas.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="estilo">
+  <div class="wrap">
+    <div class="feat" data-rv>
+      <div class="phone float"><img src="../../img/gs-joyero.jpg" alt="El Joyero" loading="lazy"></div>
+      <div>
+        <h2 style="text-align:left">Tu estilo, en el Joyero</h2>
+        <p class="lead">Viste el juego a tu gusto. Cada cosmético se gana jugando: se arma pieza a pieza como un rompecabezas con los fragmentos que consigues.</p>
+        <ul>
+          <li>Diseños de flechas, juegos de gemas y tallas.</li>
+          <li>Paisajes, ambientes, diseños y colores de tablero, celdas.</li>
+          <li>Marcas doradas, efectos al romper, estilos de música y canciones.</li>
+          <li>Pruébalos en una vitrina que juega sola antes de equiparlos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid g2" data-rv-kids>
+      <div class="card tilt"><h3>Temporadas y Sendero</h3><p>Penumbra, Navidad, Cosecha y Primavera: cada temporada trae su Sendero de 30 paradas con cosméticos de temporada, cofres sorpresa y poderes.</p></div>
+      <div class="card tilt"><h3>Todo Jewelverse, conectado</h3><p>Algunos cosméticos solo se ganan en Gem Scape, como la Senda dorada o las Saetas, y luego aparecen en los demás juegos de Jewelverse.</p></div>
+      <div class="card tilt"><h3>Logros y estadísticas</h3><p>Logros por tierras visitadas, joyas liberadas, rachas y más, con un álbum de todo lo que has coleccionado.</p></div>
+      <div class="card tilt"><h3>Tu avance, seguro</h3><p>Se juega sin conexión. Si quieres, guarda tu avance en la nube con tu cuenta de Google, o cópialo como un código de respaldo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="idiomas" class="center">
+  <div class="wrap">
+    <h2 data-rv>En 15 idiomas</h2>
+    <div class="orn" data-rv><i></i></div>
+    <div class="marquee" data-rv><div class="langs">
+      <span>Español</span><span>English</span><span>Português</span><span>Français</span><span>Deutsch</span><span>Italiano</span><span>Polski</span><span>Русский</span><span>Türkçe</span><span>Bahasa Indonesia</span><span>Tiếng Việt</span><span>日本語</span><span>한국어</span><span>简体中文</span><span>繁體中文</span><span>Español</span><span>English</span><span>Português</span><span>Français</span><span>Deutsch</span><span>Italiano</span><span>Polski</span><span>Русский</span><span>Türkçe</span><span>Bahasa Indonesia</span><span>Tiếng Việt</span><span>日本語</span><span>한국어</span><span>简体中文</span><span>繁體中文</span>
+    </div></div>
+    <p class="lead" style="margin-top:40px">¿Preguntas o problemas con el juego? Escríbenos a <a href="mailto:support@grindpixel.studio">support@grindpixel.studio</a>.</p>
+  </div>
+</section>
+
+</main>
+<footer id="contacto"><div class="wrap">
+  <img src="../../img/logo.svg" alt="GrindPixel Studio" width="120" height="26">
+  <span>© 2026 GrindPixel Studio · <a href="mailto:support@grindpixel.studio">support@grindpixel.studio</a></span>
+  <nav><a href="../../jewelverse/">Jewelverse</a><a href="../../jewelverse/gem-scape/">Gem Scape</a><a href="../../privacidad/">Privacidad</a><a href="../../borrar-datos/">Borrar datos</a></nav>
+</div></footer>
+<script src="../../js/marca.js"></script>
+<script src="../../js/sitio.js"></script>
+</body>
+</html>
